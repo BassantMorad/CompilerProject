@@ -1,0 +1,64 @@
+<Goal> -> <MainClass> <ClassDeclarationSTM> <EOF>
+<ClassDeclarationSTM> -> <ClassDeclaration><ClassDeclarationSTM> | $
+------------------------------------------------------------------------------------------------
+
+<MainClass> -> "class" <Identifier> "{" "public" "static" "void" "main" "(" "String" "[" "]" 
+<Identifier> ")" "{" <Statement> "}" "}"
+------------------------------------------------------------------------------------------------
+<ClassDeclaration> -> "class" <Identifier> <extends> "{" <VarDeclarationSTM> 
+<MethodDeclarationSTM> "}"
+
+<extends> -> "extends" <Identifier> | $
+<VarDeclarationSTM> -> <VarDeclaration><VarDeclarationSTM> | $
+<MethodDeclarationSTM> -> <MethodDeclaration><MethodDeclarationSTM> | $
+------------------------------------------------------------------------------------------------
+<VarDeclaration> -> <Type> <Identifier> ";"
+------------------------------------------------------------------------------------------------
+<MethodDeclaration> -> <Visiblity> <Type> <Identifier> "(" <ParamerterSTM> ")" 
+"{" <VarDeclarationSTM> <StatementSTM> "return" <Expression> ";" "}"
+
+<Visiblity> -> "public" | "private"
+<ParamerterSTM> -> <Type> <Identifier> <Paramerter> | $
+<Paramerter> -> "," <Type> <Identifier> <Paramerter> | $
+<StatementSTM> -> <Statement> <StatementSTM> | $
+------------------------------------------------------------------------------------------------
+<Type> -> "boolean" | "int" | "float" | "String" | "char" 
+| "int" "[" "]"
+| "float" "[" "]"
+| "String" "[" "]"
+| "char" "[" "]"
+| "boolean" "[" "]"
+------------------------------------------------------------------------------------------------
+<Statement> -> "{" <StatementSTM>  "}"
+| "if" "(" <Expression> ")" <Statement> "else" <Statement>
+| "if" "(" <Expression> ")" <Statement>
+| "while" "(" <Expression> ")" <Statement>
+| "System.out.println" "(" <Expression> ")" ";"
+| <Identifier> "=" <Expression> ";"
+| <Identifier> "[" <Expression> "]" "=" <Expression> ";"
+------------------------------------------------------------------------------------------------
+<Expression> -> <Expression> <Operator> <Expression>
+| <Expression> "[" <Expression> "]"
+| <Expression> "." "length"
+| <Expression> "." <Identifier> "(" <ExpressionSTM2> ")" 
+| <INTEGER_LITERAL>
+| "true"
+| "false"
+| <Identifier>
+| "this"
+| "new" "int" "[" <Expression> "]"
+| "new" <Identifier> "(" ")"
+| "!" <Expression>
+| "(" <Expression> ")"
+
+<Operator> -> "&&" | "<" | "+" | "-" | "*" 
+<ExpressionSTM> -> "," <Expression> <ExpressionSTM> | $
+<ExpressionSTM2> -> <Expression> <ExpressionSTM> | $
+------------------------------------------------------------------------------------------------
+<Identifier> -> <IDENTIFIER>
+
+
+
+
+
+

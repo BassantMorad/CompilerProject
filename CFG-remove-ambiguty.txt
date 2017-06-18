@@ -1,0 +1,58 @@
+<Goal> -> <MainClass> <ClassDeclarationSTM> <EOF>
+<ClassDeclarationSTM> -> <ClassDeclaration> <ClassDeclarationSTM> | $
+
+<MainClass> -> "class" <Identifier> "{" "public" "static" "void" "main" "(" "String" "[" "]" <Identifier> ")" "{" <Statement> "}" "}"
+
+<ClassDeclaration> -> "class" <Identifier> <extends> "{" <VarDeclarationSTM> <MethodDeclarationSTM> "}"
+
+<extends> -> "extends" <Identifier> | $
+<VarDeclarationSTM> -> <VarDeclaration> <VarDeclarationSTM> | $
+<MethodDeclarationSTM> -> <MethodDeclaration> <MethodDeclarationSTM> | $
+
+<VarDeclaration> -> <Type> <Identifier> ";"
+
+<MethodDeclaration> -> <Visiblity> <Type> <Identifier> "(" <ParamerterSTM> ")" "{" <VarDeclarationSTM> <StatementSTM> "return" <Expression> ";" "}"
+
+<Visiblity> -> "public" | "private"
+
+<ParamerterSTM> -> <Type> <Identifier> <Paramerter> | $
+
+<Paramerter> -> "," <Type> <Identifier> <Paramerter> | $
+
+<StatementSTM> -> <Statement> <StatementSTM> | $
+
+<Type> -> "boolean" <Array>| "int" <Array> | "float" <Array> | "String" <Array> | "char" <Array> 
+
+<Array> -> "[" "]" | $
+
+<Statement> -> "{" <StatementSTM> "}"
+| "if" "(" <Expression> ")" <Statement> <Else>
+| "while" "(" <Expression> ")" <Statement>
+| "System.out.println" "(" <Expression> ")" ";"
+| <Identifier> <IdentifierAssign>
+
+<Else> -> "else" <Statement> | $
+<IdentifierAssign> -> "=" <Expression> ";" | "[" <Expression> "]" "=" <Expression> ";"
+
+<Expression> ->  "!" <Expression> <ExpressionRec>
+| "(" <Expression> ")" <ExpressionRec> 
+| <INTEGER_LITERAL> <ExpressionRec>
+| "true" <ExpressionRec>
+| "false" <ExpressionRec>
+| <Identifier> <ExpressionRec>
+| "this" <ExpressionRec>
+| "new" <Constructor> <ExpressionRec>
+
+<ExpressionRec> -> <Operator> <Expression> <ExpressionRec>
+| "[" <Expression> "]" <ExpressionRec>
+| "." <Expression1Fn>
+| $
+
+<Expression1Fn> -> "length" <Expression1> |
+ <Identifier> "(" <ExpressionSTM_> ")" <Expression1>
+
+<Constructor> -> "int" "[" <Expression> "]" | <Identifier> "(" ")"
+
+<Operator> -> "&&" | "<" | "+" | "-" | "*" 
+<ExpressionSTM> -> "," <Expression> <ExpressionSTM> | $
+<ExpressionSTM_> -> <Expression> <ExpressionSTM> | $

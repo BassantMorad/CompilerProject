@@ -1,0 +1,218 @@
+<CLASS>:class
+<ID>:Factorial
+<LEFT_CURLY_BRACT>:{
+<EOL>:End OF Line
+<PUBLIC>:public
+<STATIC>:static
+<VOID>:void
+<ID>:main
+<LEFT_ROUND_BRACKET>:(
+<String>:String
+<LEFT_SQUARE_BRACKERT>:[
+<RIGHT_SQUARE_BRACKET>:]
+<ID>:a
+<RIGHT_ROUND_B>:)
+<LEFT_CURLY_BRACT>:{
+<System.out.println>:System.out.println
+<LEFT_ROUND_BRACKET>:(
+<NEW>:new
+<ID>:Fac
+<LEFT_ROUND_BRACKET>:(
+<RIGHT_ROUND_B>:)
+<DOT>:.
+<ID>:ComputeFac
+<LEFT_ROUND_BRACKET>:(
+<INTEGRAL_LITERAL>:10
+<RIGHT_ROUND_B>:)
+<RIGHT_ROUND_B>:)
+<SEMICOLON>:;
+<EOL>:End OF Line
+<RIGHT_CURLY_BRACKET>:}
+<EOL>:End OF Line
+<RIGHT_CURLY_BRACKET>:}
+<EOL>:End OF Line
+<CLASS>:class
+<ID>:Fac1
+<Extends>:extends
+<ID>:Fac
+<LEFT_CURLY_BRACT>:{
+<EOL>:End OF Line
+<INT>:int
+<ID>:num
+<SEMICOLON>:;
+<EOL>:End OF Line
+<String>:String
+<LEFT_SQUARE_BRACKERT>:[
+<RIGHT_SQUARE_BRACKET>:]
+<ID>:x
+<SEMICOLON>:;
+<EOL>:End OF Line
+<FLOAT>:float
+<ID>:y
+<SEMICOLON>:;
+<EOL>:End OF Line
+<EOL>:End OF Line
+<ID>:private
+<INT>:int
+<ID>:ComputeFac
+<LEFT_ROUND_BRACKET>:(
+<INT>:int
+<ID>:num
+<COMMA>:,
+<CHAR>:char
+<LEFT_SQUARE_BRACKERT>:[
+<RIGHT_SQUARE_BRACKET>:]
+<ID>:a
+<RIGHT_ROUND_B>:)
+<LEFT_CURLY_BRACT>:{
+<EOL>:End OF Line
+<WHILE>:while
+<LEFT_ROUND_BRACKET>:(
+<ID>:x
+<GREATER_THAN>:<
+<FALSE>:false
+<AND>:&&
+<True>:true
+<RIGHT_ROUND_B>:)
+<EOL>:End OF Line
+<LEFT_CURLY_BRACT>:{
+<EOL>:End OF Line
+<System.out.println>:System.out.println
+<LEFT_ROUND_BRACKET>:(
+<NEW>:new
+<ID>:x
+<LEFT_ROUND_BRACKET>:(
+<RIGHT_ROUND_B>:)
+<RIGHT_ROUND_B>:)
+<SEMICOLON>:;
+<EOL>:End OF Line
+<IF_CONDITION>:if
+<LEFT_ROUND_BRACKET>:(
+<ID>:n
+<GREATER_THAN>:<
+<INTEGRAL_LITERAL>:1
+<RIGHT_ROUND_B>:)
+<EOL>:End OF Line
+<ID>:num
+<EQUAL>:=
+<INTEGRAL_LITERAL>:1
+<SEMICOLON>:;
+<EOL>:End OF Line
+<< ELSE > : >:else
+<EOL>:End OF Line
+<IF_CONDITION>:if
+<LEFT_ROUND_BRACKET>:(
+<ID>:u
+<GREATER_THAN>:<
+<INTEGRAL_LITERAL>:1
+<RIGHT_ROUND_B>:)
+<EOL>:End OF Line
+<ID>:num
+<EQUAL>:=
+<INTEGRAL_LITERAL>:1
+<SEMICOLON>:;
+<EOL>:End OF Line
+<< ELSE > : >:else
+<EOL>:End OF Line
+<IF_CONDITION>:if
+<LEFT_ROUND_BRACKET>:(
+<ID>:m
+<GREATER_THAN>:<
+<INTEGRAL_LITERAL>:1
+<RIGHT_ROUND_B>:)
+<EOL>:End OF Line
+<ID>:x
+<EQUAL>:=
+<INTEGRAL_LITERAL>:55
+<SEMICOLON>:;
+<EOL>:End OF Line
+<< ELSE > : >:else
+<EOL>:End OF Line
+<IF_CONDITION>:if
+<LEFT_ROUND_BRACKET>:(
+<True>:true
+<RIGHT_ROUND_B>:)
+<EOL>:End OF Line
+<IF_CONDITION>:if
+<LEFT_ROUND_BRACKET>:(
+<ID>:a
+<GREATER_THAN>:<
+<INTEGRAL_LITERAL>:7
+<RIGHT_ROUND_B>:)
+<EOL>:End OF Line
+<IF_CONDITION>:if
+<LEFT_ROUND_BRACKET>:(
+<ID>:mmmm
+<GREATER_THAN>:<
+<INTEGRAL_LITERAL>:2
+<RIGHT_ROUND_B>:)
+<EOL>:End OF Line
+<IF_CONDITION>:if
+<LEFT_ROUND_BRACKET>:(
+<ID>:a
+<GREATER_THAN>:<
+<INTEGRAL_LITERAL>:7
+<RIGHT_ROUND_B>:)
+<EOL>:End OF Line
+<IF_CONDITION>:if
+<LEFT_ROUND_BRACKET>:(
+<ID>:mmmm
+<GREATER_THAN>:<
+<INTEGRAL_LITERAL>:2
+<RIGHT_ROUND_B>:)
+<EOL>:End OF Line
+<IF_CONDITION>:if
+<LEFT_ROUND_BRACKET>:(
+<ID>:a
+<GREATER_THAN>:<
+<INTEGRAL_LITERAL>:7
+<RIGHT_ROUND_B>:)
+<EOL>:End OF Line
+<ID>:num
+<EQUAL>:=
+<INTEGRAL_LITERAL>:1
+<SEMICOLON>:;
+<EOL>:End OF Line
+<< ELSE > : >:else
+<EOL>:End OF Line
+<IF_CONDITION>:if
+<LEFT_ROUND_BRACKET>:(
+<NOT>:!
+<FALSE>:false
+<RIGHT_ROUND_B>:)
+<EOL>:End OF Line
+<ID>:num_aux
+<EQUAL>:=
+<INTEGRAL_LITERAL>:1
+<SEMICOLON>:;
+<EOL>:End OF Line
+<< ELSE > : >:else
+<EOL>:End OF Line
+<ID>:num_aux
+<EQUAL>:=
+<ID>:num
+<MULTIPLY>:*
+<LEFT_ROUND_BRACKET>:(
+<THIS>:this
+<DOT>:.
+<ID>:ComputeFac
+<LEFT_ROUND_BRACKET>:(
+<ID>:num
+<MINUS>:-
+<INTEGRAL_LITERAL>:1
+<RIGHT_ROUND_B>:)
+<RIGHT_ROUND_B>:)
+<PLUS>:+
+<ID>:m
+<SEMICOLON>:;
+<EOL>:End OF Line
+<EOL>:End OF Line
+<RIGHT_CURLY_BRACKET>:}
+<EOL>:End OF Line
+<RETURN>:return
+<ID>:num_aux
+<SEMICOLON>:;
+<EOL>:End OF Line
+<RIGHT_CURLY_BRACKET>:}
+<EOL>:End OF Line
+<RIGHT_CURLY_BRACKET>:}

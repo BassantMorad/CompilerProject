@@ -1,0 +1,54 @@
+Goal ::= MainClass ( ClassDeclaration )* <EOF>
+
+MainClass ::= "class" Identifier "{" "public" "static" "void" "main" "(" "String" "[" "]" Identifier ")" "{" Statement "}" "}"
+
+ClassDeclaration ::= "class" Identifier ( "extends" Identifier )? "{" ( VarDeclaration )* ( MethodDeclaration )* "}"
+
+VarDeclaration ::= Type Identifier ";"
+
+MethodDeclaration ::= ("public" | "private") Type Identifier "(" ( Type Identifier ( "," Type Identifier )*
+)? ")" "{" ( VarDeclaration )* ( Statement )* "return" Expression ";" "}" 
+
+//////////////////////////////
+
+( VarDeclaration + Statement )* 
+("return" Expression ";")?
+
+/////////////////////////////
+
+Type ::= "boolean"
+| "int"
+| "float" | "String" | "char" 
+| "int" "[" "]"
+| "float" "[" "]"
+| "String" "[" "]"
+| "char" "[" "]"
+| "boolean" "[" "]"
+
+Statement ::= "{" ( Statement )* "}"
+| "if" "(" Expression ")" Statement "else" Statement
+| "if" "(" Expression ")" Statement
+| "while" "(" Expression ")" Statement
+| "System.out.println" "(" Expression ")" ";"
+| Identifier "=" Expression ";"
+| Identifier "[" Expression "]" "=" Expression ";" 
+
+Expression ::= Expression ( "&&" | "<" | "+" | "-" | "*" ) Expression
+| Expression "[" Expression "]"
+| Expression "." "length"
+| Expression "." Identifier "(" ( Expression ( "," Expression )* )? ")"   ## call fun ??
+| <INTEGER_LITERAL>
+| "true"
+| "false"
+| Identifier
+| "this"
+| "new" "int" "[" Expression "]"
+| "new" Identifier "(" ")"
+| "!" Expression
+| "(" Expression ")" 
+
+//////////////////////
+new Fac().ComputeFac(10)
+/////////////////////
+
+Identifier ::= <IDENTIFIER>
